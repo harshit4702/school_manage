@@ -1,3 +1,4 @@
 {
+    "jwtPrivateKey" : "school_jwtPrivateKey", 
     "db": "mongodb://localhost/school"
 }

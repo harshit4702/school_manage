@@ -16,6 +16,7 @@ const studentSchema = new mongoose.Schema({
         lowercase: true,
         minlength: 3,
         unique: true,
+        required: true,
         maxlength: 150,
     },
     password: { 
@@ -27,7 +28,7 @@ const studentSchema = new mongoose.Schema({
         upperCase: 1,
         numeric: 1,
         symbol: 1,
-    }, 
+    }
  });
 
 studentSchema.methods.generateAuthToken = function(){ 

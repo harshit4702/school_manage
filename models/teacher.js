@@ -16,6 +16,7 @@ const teacherSchema = new mongoose.Schema({
         lowercase: true,
         minlength: 3,
         unique: true,
+        required: true,
         maxlength: 150,
     },
     password: { 
@@ -27,7 +28,7 @@ const teacherSchema = new mongoose.Schema({
         upperCase: 1,
         numeric: 1,
         symbol: 1,
-    }, 
+    }
  });
 
 teacherSchema.methods.generateAuthToken = function(){ 
@@ -35,7 +36,7 @@ teacherSchema.methods.generateAuthToken = function(){
     return token;
 } 
 
-const Teacher = mongoose.model('student', teacherSchema);
+const Teacher = mongoose.model('teacher', teacherSchema);
 
 function validateTeacher(teacher){
     const schema = Joi.object(
